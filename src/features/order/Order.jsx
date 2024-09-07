@@ -19,7 +19,8 @@ function Order() {
   const fetcher = useFetcher();
 
   useEffect(() => {
-    if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");
+    if (!fetcher.data && fetcher.state === "idle")
+      fetcher.load("/fast-react-pizza/menu");
   }, [fetcher]);
 
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
